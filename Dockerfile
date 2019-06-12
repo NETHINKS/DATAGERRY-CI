@@ -9,8 +9,7 @@ RUN apt update \
     # Python3
     && apt install -y python3 python3-pip \
     && ln -s /usr/bin/pip3 /usr/bin/pip \
-    # Angular
+    # npm
     && apt install -y npm \
-    && npm install -g angular-cli \
     # clear cache
     && rm -rf /var/lib/apt/lists/*
