@@ -8,7 +8,7 @@ RUN yum -y install git.x86_64 ca-certificates.noarch \
     && ln -s /usr/bin/pip3.6 /usr/bin/pip \
     # install npm
     && curl -sL https://rpm.nodesource.com/setup_12.x | bash - \
-    && yum install -y nodejs \
+    && yum install -y nodejs gcc.x86_64 gcc-c++.x86_64 \
     # install make
     && yum -y install make.x86_64 \
     # install sshpass
