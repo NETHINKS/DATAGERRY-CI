@@ -13,5 +13,7 @@ RUN yum -y install git.x86_64 ca-certificates.noarch \
     && yum -y install make.x86_64 \
     # install sshpass
     && yum -y install sshpass.x86_64 \
+    # install packaging tools
+    && yum -y install rpm-build debbuild \
     # clear cache
     && yum -y clean all
