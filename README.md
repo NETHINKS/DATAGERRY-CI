@@ -1,3 +1,3 @@
-# dataGerry-CI
+# DATAGERRY-CI
 
-Docker environment for CircleCI to build/test/deploy dataGerry
+Docker environment for CircleCI to build/test/deploy DATAGERRY
