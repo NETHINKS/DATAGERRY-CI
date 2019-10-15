@@ -15,5 +15,9 @@ RUN yum -y install git.x86_64 ca-certificates.noarch \
     && yum -y install sshpass.x86_64 \
     # install packaging tools
     && yum -y install rpm-build debbuild \
+    # install Docker client for building docker images
+    && curl -L -o /tmp/docker.tgz https://download.docker.com/linux/static/stable/x86_64/docker-19.03.3.tgz \
+    && tar -xz -C /tmp -f /tmp/docker.tgz \
+    && mv /tmp/docker/* /usr/bin \
     # clear cache
     && yum -y clean all
