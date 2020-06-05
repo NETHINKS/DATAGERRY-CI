@@ -3,11 +3,11 @@ LABEL maintainer="monitoring@nethinks.com"
 
 RUN yum -y install git.x86_64 ca-certificates.noarch \
     # install Python 3.6
-    && yum -y install https://centos7.iuscommunity.org/ius-release.rpm \
+    && yum -y install https://repo.ius.io/ius-release-el7.rpm \
     && yum -y install python36u.x86_64 python36u-pip.noarch python36u-devel.x86_64 \
     && ln -s /usr/bin/pip3.6 /usr/bin/pip \
     # install npm
-    && curl -sL https://rpm.nodesource.com/setup_11.x | bash - \
+    && curl -sL https://rpm.nodesource.com/setup_12.x | bash - \
     && yum install -y nodejs gcc.x86_64 gcc-c++.x86_64 \
     # install make
     && yum -y install make.x86_64 \
